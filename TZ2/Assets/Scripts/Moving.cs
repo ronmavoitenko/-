@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Moving : MonoBehaviour
 {
-    //public GameObject ob;
     private float l;
     private float r;
     public DynamicJoystick joystick;
@@ -12,14 +11,13 @@ public class Moving : MonoBehaviour
     private float speed;
     [SerializeField]
     private float RLspeed;
-    // Start is called before the first frame update
+    
     void Start()
     {
         r=4.5f;
         l=-4.5f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float way = joystick.Horizontal * RLspeed * Time.deltaTime;

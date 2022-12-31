@@ -5,14 +5,13 @@ using UnityEngine;
 public class ToPlayer : MonoBehaviour
 {
     GameObject Camera;
-    int number=0;
-    // Start is called before the first frame update
+    static int number=0;
+    
     void Start()
     {
         Camera = GameObject.Find("Cube");
     }
 
-    // Update is called once per frame
     void Update()
     {
         Camera.transform.position = new Vector3(transform.position.x, number+1, transform.position.z);
