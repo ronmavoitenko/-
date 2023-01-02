@@ -26,11 +26,6 @@ public class ShowTextMenu : MonoBehaviour
         {
             levelPrice.text = "Max Level";
         }
-        //StatusUpdate();
-    }
-
-    public void StatusUpdate()
-    {
     }
 
 }

@@ -13,15 +13,22 @@ public class NextLevel : MonoBehaviour
         {
             nextLevel = 4;
         }
-        //else if()
-        //{
-        //}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else if(SceneManager.GetActiveScene().name == "Level2")
+        {
+            nextLevel = 5;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level3")
+        {
+            nextLevel = 6;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level4")
+        {
+            nextLevel = 7;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level5")
+        {
+            nextLevel = 7;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

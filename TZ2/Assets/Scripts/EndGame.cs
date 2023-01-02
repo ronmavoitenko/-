@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    public static int LevelRestart;
+    public static int LevelRestart=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,18 @@ public class EndGame : MonoBehaviour
         {
             LevelRestart = 4;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else if(SceneManager.GetActiveScene().name == "Level3")
+        {
+            LevelRestart = 5;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level4")
+        {
+            LevelRestart = 6;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level5")
+        {
+            LevelRestart = 7;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

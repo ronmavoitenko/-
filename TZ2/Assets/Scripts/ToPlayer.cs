@@ -5,7 +5,7 @@ using UnityEngine;
 public class ToPlayer : MonoBehaviour
 {
     GameObject Camera;
-    static int number=0;
+    int number=0;
     
     void Start()
     {

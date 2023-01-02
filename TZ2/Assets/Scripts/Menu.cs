@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    private GameObject menu;
-    private GameObject settingsmenu;
+    public GameObject menu;
+    public GameObject settingsmenu;
     private string upr = "NumberOfCube";
+    private string lvlcnt = "savedlavel";
     private int coins = 0;
     private int count = 0;
+    private int levelContinue = 1;
     
     int scene;
 
@@ -19,12 +21,20 @@ public class Menu : MonoBehaviour
         {
             coins = PlayerPrefs.GetInt("Coins");
         }
-        count = PlayerPrefs.GetInt(upr);   
+        count = PlayerPrefs.GetInt(upr);
+        if(PlayerPrefs.HasKey(lvlcnt))
+        {   
+            levelContinue = PlayerPrefs.GetInt(lvlcnt);
+        }
+        else
+        {
+            levelContinue = 1;
+        }
     }
 
     public void Play()
     {
-        SceneManager.LoadScene(1);
+            SceneManager.LoadScene(levelContinue);
     }
 
     public void Settings()
@@ -40,14 +50,15 @@ public class Menu : MonoBehaviour
 
     public void Restart()
     {
-        
         scene = EndGame.LevelRestart;
+        PlayerPrefs.SetInt(lvlcnt, scene);
         SceneManager.LoadScene(scene);
     }
 
     public void Nextlevel()
     {
         scene = NextLevel.nextLevel;
+        PlayerPrefs.SetInt(lvlcnt, scene);
         SceneManager.LoadScene(scene);
     }
 
@@ -59,7 +70,7 @@ public class Menu : MonoBehaviour
             {
                 coins = coins-250;
                 PlayerPrefs.SetInt("Coins", coins);
-                PlayerPrefs.SetInt(upr, count+1);
+                PlayerPrefs.SetInt("NumberOfCube", count+1);
             }
             else
             {
@@ -72,7 +83,7 @@ public class Menu : MonoBehaviour
             {
                 coins = coins-500;
                 PlayerPrefs.SetInt("Coins", coins);
-                PlayerPrefs.SetInt(upr, count+1);
+                PlayerPrefs.SetInt("NumberOfCube", count+1);
             }
             else
             {
@@ -85,7 +96,7 @@ public class Menu : MonoBehaviour
             {
                 coins = coins-750;
                 PlayerPrefs.SetInt("Coins", coins);
-                PlayerPrefs.SetInt(upr, count+1);
+                PlayerPrefs.SetInt("NumberOfCube", count+1);
             }
             else
             {
@@ -98,7 +109,7 @@ public class Menu : MonoBehaviour
             {
                 coins = coins-1000;
                 PlayerPrefs.SetInt("Coins", coins);
-                PlayerPrefs.SetInt(upr, count+1);
+                PlayerPrefs.SetInt("NumberOfCube", count+1);
             }
             else
             {
@@ -111,7 +122,7 @@ public class Menu : MonoBehaviour
             {
                 coins = coins-1250;
                 PlayerPrefs.SetInt("Coins", coins);
-                PlayerPrefs.SetInt(upr, count+1);
+                PlayerPrefs.SetInt("NumberOfCube", count+1);
             }
             else
             {
@@ -124,7 +135,7 @@ public class Menu : MonoBehaviour
             {
                 coins = coins-1500;
                 PlayerPrefs.SetInt("Coins", coins);
-                PlayerPrefs.SetInt(upr, count+1);
+                PlayerPrefs.SetInt("NumberOfCube", count+1);
             }
             else
             {

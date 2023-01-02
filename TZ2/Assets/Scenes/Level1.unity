@@ -988,6 +988,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &201414781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4510677036435047403, guid: 7168bf1fb9e35cf4da6162af96fc4a8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4510677037405120374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &238056832
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,7 +5618,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 64
+  field of view: 95
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5637,14 +5643,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.27174348, y: 0.35999632, z: -0.11426643, w: 0.88515615}
-  m_LocalPosition: {x: -70.15, y: 11.93, z: -13.59}
+  m_LocalRotation: {x: 0.21587878, y: 0.37875897, z: -0.089333534, w: 0.8955208}
+  m_LocalPosition: {x: -70.42, y: 10.99, z: -13.86}
   m_LocalScale: {x: 1.3380219, y: 1.2993138, z: 1.4083483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 34.287, y: 44.122, z: -0.46}
+  m_LocalEulerAnglesHint: {x: 27.021, y: 45.906, z: 0.227}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7083,7 +7089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ae961cb1465a846b9fc706d6048929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 4510677036435047403, guid: 7168bf1fb9e35cf4da6162af96fc4a8d, type: 3}
+  Cube: {fileID: 201414781}
 --- !u!1 &1286417808
 GameObject:
   m_ObjectHideFlags: 0
@@ -10212,7 +10218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -830.41, y: 475.53}
+  m_AnchoredPosition: {x: -174.71, y: 475.53}
   m_SizeDelta: {x: 258.943, y: 128.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845118934
@@ -12236,6 +12242,16 @@ PrefabInstance:
       propertyPath: coinsText
       value: 
       objectReference: {fileID: 1845118934}
+    - target: {fileID: 4479814331448639356, guid: b63f2b32a61c771498297be574bd4d05,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 18.380613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479814331448639356, guid: b63f2b32a61c771498297be574bd4d05,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 8.690307
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b63f2b32a61c771498297be574bd4d05, type: 3}
 --- !u!1001 &4510677037405120374
